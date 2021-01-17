@@ -1,0 +1,22 @@
+body{
+    display: flex;
+
+    /* row column row-reverse column-reverse */
+    flex-direction: column; 
+    /* row - Left to right , row-reverse - Right to left */
+    /* column - from the top down (od góry do dołu), column-reverse - from the down top (dołu do góry) */
+
+
+    /* Wzgledem osi głownej - tej ktora wskazuje flex-direction: ; */
+    /* wrap nowrap(domyslnie) wrap-reverse*/
+    flex-wrap: nowrap;
+
+    /* flex-start(domyslna) , flex-end, center, space-evenly, space-around ...*/
+    justify-content: flex-start;
+
+    /* Wzgledem osi pomocnicznej(poprzecznej) te ponizej wlascisciwości: */
+    /* strech (domyslna), flex-start, flex-end, center */
+    align-content: flex-start;
+
+
+    align-items: flex-end;

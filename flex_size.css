@@ -1,0 +1,60 @@
+body{
+    display: flex;
+
+    /* row column row-reverse column-reverse */
+    flex-direction: row; 
+    /* row - Left to right , row-reverse - Right to left */
+    /* column - from the top down (od góry do dołu), column-reverse - from the down top (dołu do góry) */
+
+    /* Wzgledem osi głownej - tej ktora wskazuje flex-direction: ; */
+    /* wrap nowrap(domyslnie) wrap-reverse*/
+    flex-wrap: wrap;
+
+    /* flex-start(domyslna) , flex-end, center, space-evenly, space-around ...*/
+    justify-content: center;
+
+    /* Wzgledem osi pomocnicznej(poprzecznej) te ponizej wlascisciwości: */
+    /* strech (domyslna), flex-start, flex-end, center */
+    align-content: flex-start;
+
+    /* Notacja skrócona */
+    /* flex-flow: row wrap; */
+    /* flex-flow: flex-direction flex-wrap; */
+
+
+    /* flex: flex-grow flex-shrink: flex-basis: ;; */
+    /* flex: 1 0 300px; */
+}
+ /* Rozmiar elementu */
+
+/* wartość 0 dla flex-grow albo flex-shrink powoduje ze element nie zmienia swojego rozmiaru , 1 pozwala zmieniać rozmiar - rozmiar dla flex-direction: ROW szerokość, a dla COLUMN to wysokość */
+
+
+/* Kolejność elementów */
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* flex-basis: 300px;
+    flex-shrink: 1; */
+    order: 0;
+}
+
+.box:nth-child(5){
+    order: 1;
+}
+
+.box:nth-child(3){
+    order: 2;
+}
+
+.box:nth-child(6){
+    order: -1;
+}
+
+.box:nth-child(2){
+    order: -2;
+}
+
